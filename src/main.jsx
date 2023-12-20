@@ -13,6 +13,7 @@ import TopicList from './Components/TopicList/TopicList.jsx';
 import Post from './Components/Post/Post.jsx';
 import postData from './data/post_data.json'
 
+// This caused me major problems, i wasn't using my anonymous function or 'find' correctly
 const postLoader = ({ params }) => {
   const post = postData.find((post) => post.id === parseInt(params.id));
   if (post) {
